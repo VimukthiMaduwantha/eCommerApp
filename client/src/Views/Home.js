@@ -39,7 +39,7 @@ function Home() {
                             <Typography>
                                 Welcome to Mebius, your go-to store for top-quality electronic products and exceptional customer service!
                             </Typography>
-                            <button class="buttonShop" onClick={() => navigateShop()}>Shop Now</button>
+                            <button className="buttonShop" onClick={() => navigateShop()}>Shop Now</button>
                         </Box>
                     </Grid>
                 </Grid>
