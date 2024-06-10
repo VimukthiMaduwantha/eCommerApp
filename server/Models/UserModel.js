@@ -19,8 +19,18 @@ const UserModel = Schema(
             type: String,
             required: true
         },
+        createdDate: {
+            type: Date,
+            default: Date.now
+        },
+        modifiedDate: {
+            type: Date
+        }
+    },
+    {
+        timestamps: { createdAt: 'createdDate', updatedAt: 'modifiedDate' }
     }
-)
+);
 
 const user = mongoose.model("User", UserModel);
 module.exports = user;

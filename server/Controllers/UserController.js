@@ -27,6 +27,18 @@ const CreateUser = async (req, res) => {
     }
 }
 
+// get user details
+const GetUserDetails = async (req, res) => {
+    try {
+        const UserDetail = await UserModel.find().sort({ createdDate: -1 });;
+        return res.status(200).send({ UserDetail });
+    } catch (err) {
+        console.log("error:> ")
+        return res.status(500).send("Server Error");
+    }
+}
+
 module.exports = {
-    CreateUser
+    CreateUser,
+    GetUserDetails
 }
