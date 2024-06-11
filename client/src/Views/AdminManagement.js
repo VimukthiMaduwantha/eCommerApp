@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Box, Tab, Tabs } from '@mui/material'
 import PropTypes from 'prop-types';
 import UserManagement from '../Components/UserManagement';
+import ProductCategoryManagement from '../Components/ProductCategoryManagement';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -51,7 +52,7 @@ function AdminManagement() {
                         textColor='error'
                     >
                         <Tab label="User Management" {...a11yProps(0)} />
-                        <Tab label="Item Two" {...a11yProps(1)} />
+                        <Tab label="Product category Management" {...a11yProps(1)} />
                         <Tab label="Item Three" {...a11yProps(2)} />
                     </Tabs>
                 </Box>
@@ -59,7 +60,7 @@ function AdminManagement() {
                     <UserManagement />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>
-                    Item Two
+                    <ProductCategoryManagement />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
                     Item Three

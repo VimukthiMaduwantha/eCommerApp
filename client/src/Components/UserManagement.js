@@ -5,6 +5,8 @@ import axios from 'axios';
 
 function UserManagement() {
     const [allUsers, setAllUsers] = useState([]);
+    const [searchUsers, setSearchUsers] = useState("");
+    console.log("searchUsers:>", searchUsers)
 
     useEffect(() => {
         GetUserDetails();
@@ -36,10 +38,12 @@ function UserManagement() {
                                         </div>&nbsp;
                                         <TextField
                                             id="outlined-basic"
-                                            placeholder="Outlined"
+                                            placeholder="Search"
                                             variant="standard"
                                             size='small'
                                             color='error'
+                                            value={searchUsers}
+                                            onChange={(e) => { setSearchUsers(e.target.value) }}
                                         />
                                     </Box>
                                     <Table aria-label="simple table">
@@ -52,7 +56,13 @@ function UserManagement() {
                                             </TableRow>
                                         </TableHead>
                                         <TableBody>
-                                            {allUsers.map((users, id) => (
+                                            {allUsers.filter((element) => {
+                                                if (searchUsers === "") {
+                                                    return element;
+                                                } else if ((element.userName.toLowerCase()).includes(searchUsers.toLowerCase()) || (element.pNumber.toLowerCase()).includes(searchUsers.toLowerCase()) || (element.email.toLowerCase()).includes(searchUsers.toLowerCase())) {
+                                                    return element;
+                                                }
+                                            }).map((users, id) => (
                                                 <TableRow>
                                                     <TableCell sx={{ textAlign: 'center' }}>{id + 1}</TableCell>
                                                     <TableCell sx={{ textAlign: 'center' }}>{users.userName}</TableCell>

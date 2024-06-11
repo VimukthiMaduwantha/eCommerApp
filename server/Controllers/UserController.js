@@ -33,7 +33,6 @@ const GetUserDetails = async (req, res) => {
         const UserDetail = await UserModel.find().sort({ createdDate: -1 });;
         return res.status(200).send({ UserDetail });
     } catch (err) {
-        console.log("error:> ")
         return res.status(500).send("Server Error");
     }
 }
