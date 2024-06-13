@@ -1,23 +1,19 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 const { Schema } = mongoose;
 
-const UserModel = Schema(
+const ItemCategoryModel = Schema(
     {
-        userName: {
+        categoryID: {
+            type: Number,
+            required: true
+        },
+        categoryName: {
             type: String,
             required: true
         },
-        email: {
-            type: String,
-            required: true
-        },
-        pNumber: {
-            type: String,
-            required: true
-        },
-        password: {
-            type: String,
-            required: true
+        isActive: {
+            type: Boolean,
+            default: true
         },
         createdDate: {
             type: Date,
@@ -30,7 +26,7 @@ const UserModel = Schema(
     {
         timestamps: { createdAt: 'createdDate', updatedAt: 'modifiedDate' }
     }
-);
+)
 
-const user = mongoose.model("User", UserModel);
-module.exports = user;
+const ItemCategory = mongoose.model("Item_category", ItemCategoryModel);
+module.exports = ItemCategory;
