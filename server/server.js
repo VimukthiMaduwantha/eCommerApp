@@ -21,6 +21,9 @@ mongoose.connect(url, {
 const User = require('./Routes/UserRoutes');
 app.use("/api/user", User);
 
+const Item = require('./Routes/ItemRoutes');
+app.use("/api/item", Item);
+
 
 
 

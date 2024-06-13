@@ -19,6 +19,17 @@ function ProductCategoryManagement() {
             [e.target.name]: value
         })
     }
+
+    function addCatogory() {
+        const categoryModel = {
+            categoryID: categoryData.categoryID,
+            categoryName: categoryData.categoryName,
+        }
+
+        console.log("categoryModel:> ")
+    }
+
+
     return (
         <>
             <Box>
@@ -39,7 +50,7 @@ function ProductCategoryManagement() {
                                 })
                             }
 
-                            // onSubmit={() => addCatogory()}
+                            onSubmit={() => addCatogory()}
                             enableReinitialize
                         >
                             {({
