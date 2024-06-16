@@ -113,7 +113,7 @@ function UserRegisterComp({ userRegisterCom, setUserRegisterCom, setHandleOpen }
                                             value={userData.userName}
                                             id='userName'
                                             size="small"
-                                            color='error'
+
                                             type='text'
                                             placeholder='Name'
                                             onChange={(e) => handleChange(e)}
@@ -129,7 +129,7 @@ function UserRegisterComp({ userRegisterCom, setUserRegisterCom, setHandleOpen }
                                             value={userData.email}
                                             id='email'
                                             size="small"
-                                            color='error'
+
                                             type='text'
                                             placeholder='Email Address'
                                             onChange={(e) => handleChange(e)}
@@ -145,7 +145,7 @@ function UserRegisterComp({ userRegisterCom, setUserRegisterCom, setHandleOpen }
                                             value={userData.pNumber}
                                             id='pNumber'
                                             size="small"
-                                            color='error'
+
                                             placeholder='Phone Number'
                                             type='text'
                                             onChange={(e) => handleChange(e)}
@@ -161,7 +161,7 @@ function UserRegisterComp({ userRegisterCom, setUserRegisterCom, setHandleOpen }
                                             value={userData.password}
                                             id='password'
                                             size="small"
-                                            color='error'
+
                                             placeholder='Password'
                                             type='password'
                                             onChange={(e) => handleChange(e)}
@@ -171,7 +171,7 @@ function UserRegisterComp({ userRegisterCom, setUserRegisterCom, setHandleOpen }
                                         <center>
                                             <Button
                                                 variant="contained"
-                                                color='error'
+
                                                 size='small'
                                                 sx={{ width: '30%' }}
                                                 onClick={clearUserdata}
@@ -181,7 +181,7 @@ function UserRegisterComp({ userRegisterCom, setUserRegisterCom, setHandleOpen }
                                             &nbsp;
                                             <Button
                                                 variant="contained"
-                                                color='error'
+
                                                 size='small'
                                                 sx={{ width: '30%' }}
                                                 type='submit'

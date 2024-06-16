@@ -6,7 +6,6 @@ import axios from 'axios';
 function UserManagement() {
     const [allUsers, setAllUsers] = useState([]);
     const [searchUsers, setSearchUsers] = useState("");
-    console.log("searchUsers:>", searchUsers)
 
     useEffect(() => {
         GetUserDetails();
@@ -41,7 +40,7 @@ function UserManagement() {
                                             placeholder="Search"
                                             variant="standard"
                                             size='small'
-                                            color='error'
+
                                             value={searchUsers}
                                             onChange={(e) => { setSearchUsers(e.target.value) }}
                                         />
