@@ -3,6 +3,7 @@ import { Box, Tab, Tabs } from '@mui/material'
 import PropTypes from 'prop-types';
 import UserManagement from '../Components/UserManagement';
 import ProductCategoryManagement from '../Components/ProductCategoryManagement';
+import ProductManagement from '../Components/ProductManagement';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -51,9 +52,9 @@ function AdminManagement() {
                         allowScrollButtonsMobile
                         textColor='error'
                     >
-                        <Tab label="User Management" {...a11yProps(0)} />
-                        <Tab label="Product category Management" {...a11yProps(1)} />
-                        <Tab label="Item Three" {...a11yProps(2)} />
+                        <Tab sx={{ fontWeight: 'bold' }} label="User Management" {...a11yProps(0)} />
+                        <Tab sx={{ fontWeight: 'bold' }} label="Product category Management" {...a11yProps(1)} />
+                        <Tab sx={{ fontWeight: 'bold' }} label="Product Management" {...a11yProps(2)} />
                     </Tabs>
                 </Box>
                 <CustomTabPanel value={value} index={0}>
@@ -63,7 +64,7 @@ function AdminManagement() {
                     <ProductCategoryManagement />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
-                    Item Three
+                    <ProductManagement />
                 </CustomTabPanel>
             </Box>
         </>

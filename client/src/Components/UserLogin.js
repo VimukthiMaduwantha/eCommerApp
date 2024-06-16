@@ -52,7 +52,7 @@ function UserLogin({ setHandleOpen, handelOpen }) {
                                 // value={itemCodeNew}
                                 id='itemCode'
                                 size="small"
-                                color='error'
+
                                 placeholder='User Name'
                             />
                         </Grid>
@@ -66,7 +66,7 @@ function UserLogin({ setHandleOpen, handelOpen }) {
                                 // value={itemCodeNew}
                                 id='itemCode'
                                 size="small"
-                                color='error'
+
                                 placeholder='Password'
                             />
                         </Grid>
@@ -74,7 +74,7 @@ function UserLogin({ setHandleOpen, handelOpen }) {
                             <center>
                                 <Button
                                     variant="contained"
-                                    color='error'
+
                                     size='small'
                                     sx={{ width: '50%' }}
                                 >

@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 const ItemCategoryModel = Schema(
     {
         categoryID: {
-            type: Number,
+            type: String,
             required: true
         },
         categoryName: {
